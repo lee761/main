@@ -63,8 +63,7 @@ https://github.com/AY1920S1-CS2113T-F11-3/main/pull/192[#192]
 ==== Minor Enhancement:
 ===== Priority feature
 * Students can set priorities for tasks according to its urgency or severity. This feature works well with
-several other commands, like the `update` command, or any of the add task commands (`todo`, `deadline`,
-`event`)
+several other commands, like the `update` command.
 
 * *Code contributed:*
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/79[#79],
@@ -89,11 +88,11 @@ https://github.com/AY1920S1-CS2113T-F11-3/main/pull/119[#119]
 and test guide.
 
 ==== Community:
-*** PRs reviewed: https://github.com/AY1920S1-CS2113T-F11-3/main/pull/81[#81],
+* PRs reviewed: https://github.com/AY1920S1-CS2113T-F11-3/main/pull/81[#81],
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/114[#114],
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/185[#185]
 
-*** C-Tagging adopted by team mate and was further enhanced to allow adding of multiple tags: https://github.com/AY1920S1-CS2113T-F11-3/main/pull/60[#60], https://github.com/AY1920S1-CS2113T-F11-3/main/pull/62[#62]
+* C-Tagging adopted by team mate and was further enhanced to allow adding of multiple tags: https://github.com/AY1920S1-CS2113T-F11-3/main/pull/60[#60], https://github.com/AY1920S1-CS2113T-F11-3/main/pull/62[#62]
 
 == Contributions to the User Guide
 We had to update our original User Guide with instructions for the enhancements we had added.
@@ -101,7 +100,8 @@ The following is an excerpt from our Duke Email Manager User Guide, showing addi
 made for some of my features.
 
 |===
-|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
+|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation
+targeting end-users._
 |===
 
 === Set Priority Command: `set`
@@ -118,7 +118,6 @@ Examples:
 |===
 |*NOTE*|The PRIORITY input is restricted to only *high*, *medium/med* or *low* (case insensitive). Any other
 PRIORITY inputted will be invalid.
-
 |===
 
 |===
@@ -126,7 +125,6 @@ PRIORITY inputted will be invalid.
 PRIORITY`
 and vice versa. It also overrides the priority set to a task by the `todo`, `deadline` or `event` command,
 but not the other way round.
-
 |===
 
 === Snooze a task: `snooze`
@@ -143,14 +141,12 @@ Examples:
 |===
 |*NOTE*|If the NO_OF_DAYS is not input, the `snooze` command will automatically snooze the task by 3 days. +
 Only tasks of type `deadline` and `event` can be snoozed.
-
 |===
 
 |===
 |*WARNING*|Once a task is snoozed, there is no undo option. To modify the date and time of the task, use the
 `update`
 command.
-
 |===
 
 === Sort task list: `sort`
@@ -168,6 +164,7 @@ Examples:
 |*NOTE*| Task list is sorted according to `time` by default. The list can be sorted by `priority`, `status`
 and `time`.
 |===
+
 |===
 |Sorted by|How task list is displayed
 |*`priority`*|tasks with higher priority will be at the top of the task list
