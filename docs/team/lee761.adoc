@@ -17,7 +17,7 @@ Interface (GUI) for students to use its functionalities by typing in commands.
 This is what our project looks like:
 
 .Duke Email Manager
-image::../images/UI(2).png[Duke Email Manager, 800]
+image::UI(2).png[Duke Email Manager, 800]
 
 My role was to write codes to enhance the task manager in our project. These includes codes for more
 natural date format feature and sorting feature. The following sections illustrate these
@@ -26,17 +26,17 @@ guides in relation to these implementations.
 
 Note the following symbols and formatting used in this document:
 |===
-| 💡 |This is a tip. Follow these tips to aid your development of Email Manager.
+|💡|This is a tip. Follow these tips to aid your development of Email Manager.
 
 |===
 
 |===
-| ℹ |This is a note. Read these for additional information.
+|ℹ️|This is a note. Read these for additional information.
 
 |===
 
 |===
-| ⚠ |This is a warning. Heed these warnings to avoid making mistakes that will hamper your development
+|⚠️|This is a warning. Heed these warnings to avoid making mistakes that will hamper your development
 efforts.
 
 |===
@@ -88,7 +88,7 @@ program.
 * *Code contributed:*
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/192[#192]
 
-==== Minor Enhancement
+==== Minor Enhancement:
 ===== Priority feature
 * *What it does:* Students can set priorities for tasks according to its urgency or severity. (Future
 implementation: Tasks will be sorted and displayed in the GUI according to the priorities.)
@@ -155,14 +155,18 @@ Examples:
 
 `set 2 -priority med`
 
-[NOTE]
-The PRIORITY input is restricted to only *high*, *medium/med* or *low* (case insensitive).
-Any other PRIORITY inputted will be invalid.
+|===
+|ℹ️|The PRIORITY input is restricted to only *high*, *medium/med* or *low* (case insensitive). Any other
+PRIORITY inputted will be invalid.
 
-[WARNING]
-This command can override the priority set to a task by the command `update ITEM_NUMBER -priority PRIORITY`
+|===
+
+|===
+|⚠️|This command can override the priority set to a task by the command `update ITEM_NUMBER -priority PRIORITY`
 and vice versa. It also overrides the priority set to a task by the `todo`, `deadline` or `event` command,
 but not the other way round.
+
+|===
 
 === Snooze a task: `snooze`
 Format: `snooze ITEM_NUMBER [-by NO_OF_DAYS]`
@@ -175,14 +179,17 @@ Examples:
 
 `snooze 1 -by 4`
 
-[NOTE]
-If the NO_OF_DAYS is not input, the `snooze` command will automatically snooze the task by 3 days. +
+|===
+|ℹ️|If the NO_OF_DAYS is not input, the `snooze` command will automatically snooze the task by 3 days. +
 Only tasks of type `deadline` and `event` can be snoozed.
 
-[WARNING]
-Once a task is snoozed, there is no undo option. To modify the date and time of the task, use the `update`
+|===
+
+|===
+|⚠️|Once a task is snoozed, there is no undo option. To modify the date and time of the task, use the `update`
 command.
-== Contributions to the Developer Guide
+
+|===
 
 === Sort task list: `sort`
 Format: `sort SORT_TYPE`
@@ -222,7 +229,7 @@ I mainly contributed to the documentation of the features that I have implemente
 task section. This includes use cases and test guides that are related to my features.
 
 |===
-|_Given below are an extract of what I contributed to the Developer Guide. They showcase my ability to write
+|_Given below are an *extract* of what I contributed to the Developer Guide. They showcase my ability to write
 technical documentation and the technical depth of my contributions to the project._
 |===
 
@@ -243,26 +250,10 @@ task can be added into the task list quickly. The benefits of having this Natura
 The following sequence diagram below illustrates how this feature works:
 
 .Natural Dates Support Sequence diagram
-image::../images/TaskParseNaturalDate (1) (2).png[Natural Dates Support, 800]
+image::TaskParseNaturalDate (1) (2).png[Natural Dates Support, 800]
 
 As seen from the diagram above, the Natural Dates support is facilitated by three classes, namely
 `TaskCommandParseHelper`, `CommandParseHelper` and `TaskParseNaturalDateHelper`.
-
-`TaskParseNaturalDateHelper` is under the Command component.
-It implements the following operations:
-
-* `TaskParseNaturalDateHelper#isCorrectNaturalDate(day)` - Checks if `day` is a day of the week
-* `TaskParseNaturalDateHelper#convertNaturalDate(day, time)` - Converts string day and time to local date and time in LocalTimeDate format
-* `TaskParseNaturalDateHelper#getDate(timeString)` - Returns a dateTime in LocalDateTime format
-* `TaskParseNaturalDateHelper#parseDate(timeString)` - Converts timeString to LocalDateTime format if
-timeString is of `dd/MM/yyyy HHmm` format
-
-`TaskCommandParseHelper` and `CommandParseHelper` are under the Parser component.
-It implements the following operations:
-
-* `TaskCommandParseHelper#parseTaskTime(optionList)` - Parses time string extracted from optionList and returns a dateTime in LocalDateTime format
-* `TaskCommandParseHelper#checkTimeString(timeString)` - Checks if time string contains time component and returns a pair with day as key and timing as value
-* `CommandParseHelper#extractTime(optionList)` - Extracts and returns the time string from the input
 
 Given below is an example usage scenario and how Natural Dates Support behaves at each step.
 
@@ -325,17 +316,6 @@ image::../images/parseSortCommand (1) (1).png[Parse Sort Command, 800]
 As seen from the diagram above, the parsing of sort command is facilitated by two class, namely
 `TaskCommandParseHelper` and `TaskSortCommand`.
 
-`TaskCommandParseHelper` is under the Parser component.
-It implements the following operations:
-
-* `TaskCommandParseHelper#parseSortCommand(input)` - Parse the input and extracts the sort type(sortBy) after the command `sort`
-** E.g. `sort priority` -> sortBy = "priority"
-
-`TaskSortCommand` is under the Command component.
-It implements the following operations:
-
-* `TaskSortCommand#getSortType(sortBy)` - Checks sortBy and returns the sort type if sortBy is valid
-
 Given below is an example usage scenario and how `parseSortCommand` behaves at each step.
 
 *Step 1*: The user launches the application.
@@ -360,14 +340,6 @@ image::../images/TaskSortCommand.png[Task Sort Command, 800]
 
 As seen from the diagram above, the sort command is facilitated by four class, namely `TaskSortCommand`,
 `Model`, `TaskList` and `UI`.
-
-The following operations are implemented:
-
-* `TaskSortCommand#execute(model)` - executes the sort command
-* `Model#getTaskList()` - returns current task list
-* `TaskList#setSortType(sortType)` - sets the sort type of the task list to `sortType`
-* `TaskList#constructSortMessage(sortType)` - returns responseMsg
-* `UI#showResponse(responseMSg)` - display responseMsg
 
 Given below is an example usage scenario and how `TaskSortCommand` behaves at each step.
 
@@ -400,13 +372,6 @@ Given below is an example usage scenario and how `TaskSortCommand` behaves at ea
 *Step 2*: The sort type is changed to `PRIORITY` from `TIME`, and the sorting method is changed.
 
 *Step 3*: `sortByType() is called by `Model#updateGuiTaskList()` on every user input to keep task list sorted.
-
-|===
-|ℹ️|
-|sorted by `priority`|tasks with higher priority will be at the top of the task list.
-|sorted by `status`|tasks that are not completed will be at the top of the task list.
-|sorted by `time`|deadline or event tasks with nearing date and time will be at the top of the task list.
-|===
 
 ==== Design Considerations
 
