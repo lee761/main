@@ -249,11 +249,6 @@ The user wishes to add a task and keys in `flip` to switch input type to `task` 
 
 The task list can be sorted according to what the user prefer.
 
-|===
-|ℹ️|Task list can be sorted by `priority`, `status` and `time` only.
-
-|===
-
 ==== Implementation
 
 The following sequence diagram below illustrates how the sort command is parsed:
@@ -305,7 +300,7 @@ The following activity diagram shows the method `sortByType()` that changes how 
 according to the sort type:
 
 .sortByType activity diagram
-image::sortByType.png[Sort By Type, 800]
+image::sortByType.png[Sort By Type, 300]
 
 |===
 |ℹ️|The task list is sorted according to time by default.
