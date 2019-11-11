@@ -50,7 +50,8 @@ limited to coding, documentation, and other helpful contributions to the team pr
 
 === *Enhancement Added*
 
-==== Natural Date Format feature
+====  Major enhancement:
+===== Natural Date Format feature
 * *What it does:* Students can define the date (where needed) in International Organization for
 Standardization (ISO) date format, or define the date in terms of a day of the week. The natural date
 format assumes that the student wants to input the date of the next nearest day of the week.
@@ -74,7 +75,7 @@ https://github.com/AY1920S1-CS2113T-F11-3/main/pull/93[#93],
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/99[#99],
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/117[#117]
 
-==== Sorting feature
+===== Sorting feature
 * *What it does:* Students can sort the task list according to how they prefer. The task list can be sorted
 according to `priority`, `status` or `time`
 
@@ -89,7 +90,8 @@ program.
 * *Code contributed:*
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/192[#192]
 
-==== Priority feature
+==== Minor Enhancement
+===== Priority feature
 * *What it does:* Students can set priorities for tasks according to its urgency or severity. (Future
 implementation: Tasks will be sorted and displayed in the GUI according to the priorities.)
 
@@ -103,9 +105,9 @@ of the add task commands (`todo`, `deadline`, `event`)
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/79[#79],
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/121[#121]
 
-==== Snooze feature
+===== Snooze feature
 * *What it does:* Students can snooze a deadline or event task either by indicating a specific snooze
-duration or by default of 3 days(when no specific duration is keyed).
+duration or by default of 3 days (when no specific duration is keyed).
 
 * *Justification:* The time of deadline and event task might change, hence students can extend the time by
 snoozing the task.
@@ -124,7 +126,7 @@ https://github.com/AY1920S1-CS2113T-F11-3/main/pull/99[#99]
 https://github.com/AY1920S1-CS2113T-F11-3/main/pull/119[#119]
 
 ==== Documentation:
-* Added documentations for my features in the developer guide and user guide, which includes some use cases
+* Added documentations for my features in the developer guide and user guide, which include some use cases
 and test guide.
 
 ==== Community:
@@ -138,7 +140,7 @@ task: https://github.com/AY1920S1-CS2113T-F11-3/main/pull/60[#60], https://githu
 == Contributions to the User Guide
 We had to update our original User Guide with instructions for the enhancements we had added.
 The following is an excerpt from our Duke Email Manager User Guide, showing additions that I have
-made for Natural Date Format, priority, snooze and clear features.
+made for some of my features.
 
 |===
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
