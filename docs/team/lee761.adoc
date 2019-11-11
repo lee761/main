@@ -22,23 +22,6 @@ My role was to write codes to enhance the task manager. The following sections i
 implementations in more detail, as well as relevant documentation I have contributed to the user and developer
 guides in relation to these implementations.
 
-Note the following symbols and formatting used in this document:
-|===
-|💡|This is a tip. Follow these tips to aid your development of Email Manager.
-
-|===
-
-|===
-|ℹ️|This is a note. Read these for additional information.
-
-|===
-
-|===
-|⚠️|This is a warning. Heed these warnings to avoid making mistakes that will hamper your development
-efforts.
-
-|===
-
 == Summary of contributions
 
 This section summarizes the contribution I made towards the project. They mainly include, but not
@@ -141,13 +124,14 @@ Examples:
 `set 2 -priority med`
 
 |===
-|ℹ️|The PRIORITY input is restricted to only *high*, *medium/med* or *low* (case insensitive). Any other
+|*NOTE*|The PRIORITY input is restricted to only *high*, *medium/med* or *low* (case insensitive). Any other
 PRIORITY inputted will be invalid.
 
 |===
 
 |===
-|⚠️|This command can override the priority set to a task by the command `update ITEM_NUMBER -priority PRIORITY`
+|*WARNING*|This command can override the priority set to a task by the command `update ITEM_NUMBER -priority
+PRIORITY`
 and vice versa. It also overrides the priority set to a task by the `todo`, `deadline` or `event` command,
 but not the other way round.
 
@@ -165,13 +149,14 @@ Examples:
 `snooze 1 -by 4`
 
 |===
-|ℹ️|If the NO_OF_DAYS is not input, the `snooze` command will automatically snooze the task by 3 days. +
+|*NOTE*|If the NO_OF_DAYS is not input, the `snooze` command will automatically snooze the task by 3 days. +
 Only tasks of type `deadline` and `event` can be snoozed.
 
 |===
 
 |===
-|⚠️|Once a task is snoozed, there is no undo option. To modify the date and time of the task, use the `update`
+|*WARNING*|Once a task is snoozed, there is no undo option. To modify the date and time of the task, use the
+`update`
 command.
 
 |===
@@ -187,9 +172,10 @@ Examples:
 
 `sort status`
 
-[NOTE]
-Task list is sorted according to `time` by default. The list can be sorted by `priority`, `status` and
-`time`.
+|===
+|*NOTE*| Task list is sorted according to `time` by default. The list can be sorted by `priority`, `status`
+and `time`.
+|===
 |===
 |Sorted by|How task list is displayed
 |*`priority`*|tasks with higher priority will be at the top of the task list
@@ -202,12 +188,13 @@ Format: `clear`
 
 This command deletes all tasks in the list.
 
-[WARNING]
-Once executed, you will not be able to undo this command.
-
-[TIP]
-If you execute this command by accident, you may return to your last saved state
+|===
+|*WARNING*|Once executed, you will not be able to undo this command.
+|===
+|===
+|*TIP*|If you execute this command by accident, you may return to your last saved state
 by closing _Email Manager_ without using the `bye` command.
+|===
 
 == Contributions to the Developer Guide
 I mainly contributed to the documentation of the features that I have implemented, which are mainly for the
@@ -221,9 +208,7 @@ technical documentation and the technical depth of my contributions to the proje
 === Natural Dates Support
 
 Natural dates support helps to speed up the process at which users enter their task details so that their
-task can be added into the task list quickly. The benefits of having this Natural Dates support are:
-
-* Reduce the time and effort needed to key in the date and time for deadline and event tasks.
+task can be added into the task list quickly.
 
 |===
 |ℹ️|This feature only works with `deadline` and `event` tasks.
@@ -263,10 +248,6 @@ The user wishes to add a task and keys in `flip` to switch input type to `task` 
 === Sorting of Task List
 
 The task list can be sorted according to what the user prefer.
-The benefits of having this sorting feature are:
-
-* Easier viewing of task list when the list is sorted.
-* Faster checking of task list when the list is sorted.
 
 |===
 |ℹ️|Task list can be sorted by `priority`, `status` and `time` only.
